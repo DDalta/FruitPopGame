@@ -6,7 +6,6 @@ onready var timer = $Timer
 onready var colorRect = $UI/ColorRect
 onready var fruitContainer = $UI/FruitContainer
 
-
 func _on_Start_pressed():
 	get_tree().change_scene("res://Game.tscn")
 
