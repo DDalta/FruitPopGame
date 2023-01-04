@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Menu/background_shader.tres" type="Material" id=2]
+[ext_resource path="res://Font/PeaberryBase.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Buttons/Normal.tres" type="StyleBox" id=4]
+[ext_resource path="res://Buttons/Pressed.tres" type="StyleBox" id=5]
+[ext_resource path="res://Buttons/Hover.tres" type="StyleBox" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
 
 [node name="Menu" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,19 +33,28 @@ margin_left = 13.0
 margin_top = 103.0
 margin_right = 77.0
 margin_bottom = 123.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.870588, 0.870588, 0.870588, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/normal = ExtResource( 4 )
 text = "Start"
 
 [node name="Label" type="Label" parent="UI"]
-margin_left = 16.0
-margin_top = 22.0
-margin_right = 73.0
-margin_bottom = 53.0
-text = "Fruit Pop
-Game"
+margin_left = 6.0
+margin_top = 18.0
+margin_right = 84.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 1 )
+text = "Fruit
+Pop"
 align = 1
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.2
 autostart = true
 
 [connection signal="pressed" from="UI/Start" to="." method="_on_Start_pressed"]

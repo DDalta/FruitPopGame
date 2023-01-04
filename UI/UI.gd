@@ -5,7 +5,7 @@ var color_change_chance = Stats.color_change_chance
 onready var label = $Label
 onready var colorRect = $ColorRect
 
-var colors = {"e30b0b": ["Apple", "Cherry"], "fdff00": ["Banana"], "2cff00": ["Kiwi"], "f88787": ["Melon"], "ff7800": ["Orange"]}
+var colors = {"e30b0b": ["Apple", "Cherry"], "f3f025": ["Banana"], "77cb23": ["Kiwi"], "f88787": ["Melon"], "ff7800": ["Orange", "Pineapple"]}
 var current_color = "e30b0b" setget set_current_color
 
 signal color_change(color, fruit_type)

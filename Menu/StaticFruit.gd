@@ -9,7 +9,7 @@ var velocity = Vector2.ZERO
 func _ready():
 	animatedSprite.animation = fruit_animations[randi() % fruit_animations.size()]
 	animatedSprite.frame = rand_range(0, 16)
-	global_position.x = rand_range(15, 80)
+	global_position.x = rand_range(0, 90)
 	global_position.y = -20
 
 func _physics_process(delta):
