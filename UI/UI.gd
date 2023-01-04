@@ -29,5 +29,3 @@ func set_score(value):
 		color_possibilities.pop_at(color_possibilities.find(current_color, 0))
 		self.current_color = color_possibilities[randi() % color_possibilities.size()]
 		emit_signal("color_change", current_color, colors[current_color])
-		#colorRect.color = color_keys[randi() % color_keys.size()]
-		#current_color = colorRect.color.to_html(false)
