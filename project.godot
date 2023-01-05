@@ -10,8 +10,10 @@ config_version=4
 
 [application]
 
-config/name="Fruit Pop Game"
+config/name="Fruit Pop"
 run/main_scene="res://Menu/Menu.tscn"
+boot_splash/image="res://splashscreen.png"
+config/icon="res://icon.png"
 
 [autoload]
 
